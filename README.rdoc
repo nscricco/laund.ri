@@ -1,1 +1,3 @@
 Laund.ri is an application to help laundry service pickup drivers manage orders in real time. Utilizes Salesforce to manage the order pipeline.
+
+Create an .env file that includes your DATABASEDOTCOM_CLIENT_ID, DATABASEDOTCOM_CLIENT_SECRET, SALESFORCE_USERNAME, and SALESFORCE_PASSWORD.
