@@ -1,6 +1,6 @@
 class DriversController < ApplicationController
  def create
-    @driver = Driver.new(params[:user])
+    @driver = Driver.save(params) if Driver.find_by_email(params[:email])
   end
 
   def new
