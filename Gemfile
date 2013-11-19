@@ -33,8 +33,12 @@ group :doc do
 end
 
 group :development do
-	gem 'dotenv'
+	gem 'dotenv-rails'
 end
+
+gem 'pg'
+gem 'databasedotcom'
+gem 'databasedotcom-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
