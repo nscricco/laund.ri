@@ -12,7 +12,8 @@ class OrdersController < ApplicationController
   end
 
   def update
-    
+    puts params
+    puts "HELLO !"
 
   end
 
