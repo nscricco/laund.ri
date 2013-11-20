@@ -25,8 +25,8 @@ module Stream
   end  
 
   def self.subscribe_to_stream(sfm_string)
-    EM.run {
-      @client.subscribe 'All' + sfm_string do |message|
+    EM.next_tick {
+      @client.subscribe sfm_string do |message|
         puts message.inspect
       end
     }
