@@ -1,5 +1,5 @@
 class Customer < ActiveRecord::Base
-  has_many :orders
+  has_many :orders, class_name: "Order", foreign_key: "Customer_SF_ID__c"
 
 
   def customer_attributes
@@ -7,6 +7,5 @@ class Customer < ActiveRecord::Base
     values = self.attributes.map {|key, value| value}
     Hash[titles.zip(values)]
   end
-
 
 end

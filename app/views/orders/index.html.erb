@@ -1,6 +1,8 @@
 <%if current_user%>
   <% @orders.each do |order| %>
-    <div><%= order.customer.Name %></div>
+    <div class="centered">
+      <%= link_to "#{order.customer.Name}", order_path(order), :class => "btn btn-large btn-primary"  %>
+    </div><br />
   <%end%>
 <%else%>
 	<div class="home-buttons">
