@@ -1,4 +1,7 @@
 LaundRi::Application.configure do
+
+  config.assets.precompile += ['static_pages.css']
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
