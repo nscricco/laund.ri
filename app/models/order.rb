@@ -1,4 +1,6 @@
 class Order < ActiveRecord::Base
-	# include OrderHelper
+  belongs_to :customer
+  # include OrderHelper
+
 
 end
