@@ -37,8 +37,8 @@ ActiveRecord::Schema.define(version: 20131120081448) do
   end
 
   create_table "orders", force: true do |t|
-    t.float    "Weight__c"
-    t.float    "Cost__c"
+    t.decimal  "Weight__c"
+    t.decimal  "Cost__c"
     t.integer  "Number_of_Items__c"
     t.string   "Type__c"
     t.datetime "Ready_For_Pickup__c"
