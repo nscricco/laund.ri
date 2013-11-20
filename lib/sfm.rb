@@ -38,7 +38,7 @@ module SFM
   end
 
   def self.get_attributes(table_name)
-    table_name.new.attributes.keys
+    table_name.create.attributes.keys
   end
 	
 end 
