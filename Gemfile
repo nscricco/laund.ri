@@ -41,6 +41,7 @@ gem 'databasedotcom'
 gem 'databasedotcom-rails'
 gem 'bcrypt-ruby'
 
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
