@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20131119233010) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "customers", force: true do |t|
     t.string "name"
     t.string "address"
@@ -27,7 +30,6 @@ ActiveRecord::Schema.define(version: 20131119233010) do
   create_table "drivers", force: true do |t|
     t.string   "password_digest"
     t.string   "password_confirmation"
-    t.string   "username"
     t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
