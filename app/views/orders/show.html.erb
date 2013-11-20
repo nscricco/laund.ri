@@ -1,11 +1,18 @@
 <div>
-  <h3>Order For: <%= @customer['Name'] %></h3>
+
+  <div>
+    <%= button_to "Delivered", { action: "update", id: @order.id, confirming: "delivered" }, method: :put, data: { confirm: "Are you sure?" }, remote: true %>
+    <%= button_to "Out for Delivery", { action: "update", id: @order.id, confirming: "en_route" }, method: :put, data: { confirm: "Are you sure?" }, remote: true %>
+  </div>
+
+
+  <h3>Order For: <%= @customer_attributes['Name'] %></h3>
 
   <table>
     <tr>
       <th colspan="2">Customer Information</th>
     </tr>
-  <% @customer.each_pair do |name, value| %>
+  <% @customer_attributes.each_pair do |name, value| %>
     <% if name != 'Preferences' %>
       <tr>
         <td><%= name %></td>
@@ -20,7 +27,7 @@
     <tr>
       <th colspan="2">Order Status</th>
     </tr>
-  <% @order.each_pair do |name, value| %>
+  <% @order_attributes.each_pair do |name, value| %>
     <% if name != 'Customer_ID' %>
       <tr>
         <td><%= name %></td>

@@ -11,9 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
 ActiveRecord::Schema.define(version: 20131120081448) do
-
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,6 +46,7 @@ ActiveRecord::Schema.define(version: 20131120081448) do
     t.datetime "arrived__c"
     t.datetime "complete__c"
     t.datetime "delivered__c"
+    t.integer  "customer_id"
     t.string   "Customer_SF_ID__c"
   end
 
