@@ -33,6 +33,7 @@ group :doc do
 end
 
 gem 'bcrypt-ruby'
+gem 'faker'
 
 group :development do
 	gem 'dotenv-rails'

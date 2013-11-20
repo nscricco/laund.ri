@@ -1,5 +1,9 @@
 <%if current_user%>
-  <h1>LOGGED IN!!!!!</h1>
+  <% @orders.each do |order| %>
+    <div class="centered">
+      <%= link_to "#{order.customer.Name}", order_path(order), :class => "btn btn-large btn-primary"  %>
+    </div><br />
+  <%end%>
 <%else%>
 	<div class="home-buttons">
 		<%= link_to "Sign up", sign_up_path, class: "btn btn-default btn-lg" %>
