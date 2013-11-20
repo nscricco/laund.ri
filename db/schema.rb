@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131119092819) do
+ActiveRecord::Schema.define(version: 20131119233010) do
+
+  create_table "customers", force: true do |t|
+    t.string "name"
+    t.string "address"
+    t.string "city"
+    t.string "state"
+    t.string "zipcode"
+    t.string "phone"
+    t.string "email"
+    t.text   "preferences"
+  end
 
   create_table "drivers", force: true do |t|
     t.string   "password_digest"
@@ -20,6 +31,18 @@ ActiveRecord::Schema.define(version: 20131119092819) do
     t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "orders", force: true do |t|
+    t.decimal  "weight"
+    t.decimal  "cost"
+    t.integer  "number_of_items"
+    t.string   "service_type"
+    t.datetime "ready_for_pickup"
+    t.datetime "en_route"
+    t.datetime "arrived"
+    t.datetime "complete"
+    t.datetime "delivered"
   end
 
 end
