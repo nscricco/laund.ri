@@ -6,8 +6,14 @@ class OrdersController < ApplicationController
   end
 
   def show
-    order = Order.find(params[:id], include: :customer)
-    @order = order.order_attributes
-    @customer = order.customer.customer_attributes
+    @order = Order.find(params[:id], include: :customer)
+    @order_attributes = @order.order_attributes
+    @customer_attributes = @order.customer.customer_attributes
   end
+
+  def update
+    
+
+  end
+
 end

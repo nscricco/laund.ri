@@ -7,7 +7,7 @@ LaundRi::Application.routes.draw do
   get "sign_up" => "active_drivers#new", :as => "sign_up"
 
   resources :active_drivers, only: [:create]
-  resources :orders, only: [:index, :show]
+  resources :orders, only: [:index, :show, :update]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
