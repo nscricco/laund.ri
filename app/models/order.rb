@@ -1,4 +1,4 @@
 class Order < ActiveRecord::Base
-	include OrderHelper
+	# include OrderHelper
 
 end

@@ -3,4 +3,9 @@ class OrdersController < ApplicationController
     @active_driver = ActiveDriver.new
     # @orders = Order.all
   end
+
+  def show
+    @order = Order.find(params[:id])
+      # , include: :customers)
+  end
 end
