@@ -1,2 +1,3 @@
-class Driver < ActiveRecord::Base
+class Order < ActiveRecord::Base
+	include OrderHelper
 end
