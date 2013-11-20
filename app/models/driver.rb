@@ -1,4 +1,3 @@
 class Driver < ActiveRecord::Base
-  has_secure_password
-  validates_presence_of :email
+  validates_presence_of :Email__c, uniqueness: true
 end

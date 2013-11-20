@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
   def create
-    @driver = Driver.find_by_username(params[:session][:username])
-    if @driver && @driver.authenticate(params[:session][:password])
+    @driver = Driver.find_by(Email__c: params[:email])
+    if @driver && @driver.authenticate(params[:password])
       log_in(@driver)
     end
   end

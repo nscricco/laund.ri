@@ -28,8 +28,9 @@ ActiveRecord::Schema.define(version: 20131119233010) do
   end
 
   create_table "drivers", force: true do |t|
-    t.string   "password__c"
     t.string   "Email__c"
+    t.string   "type"
+    t.string   "password_digest"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
