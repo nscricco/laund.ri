@@ -3,8 +3,6 @@ class DriversController < ApplicationController
     if @driver = Driver.find_by_email(params[:email])
       @driver.save(params)
       log_in(@driver)
-      puts "******************************************"
-      puts session
     end
     redirect_to root_path
   end
