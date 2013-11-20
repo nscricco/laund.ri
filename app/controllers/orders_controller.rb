@@ -12,9 +12,15 @@ class OrdersController < ApplicationController
   end
 
   def update
-    puts params
-    puts "HELLO !"
+    @order = Order.find(params[:id], include: :customer)
+    puts "FUCK"
+    if params[:confirming] == 'delivered'  && @order.delivered__c.nil?
+      puts "WHATEVER"
+      @order.touch(:delivered__c)
 
+    elsif params[:confirming] == 'en_route' && @order.en_route__c.nil?
+      @order.touch(:en_route__c)
+    end
   end
 
 end
