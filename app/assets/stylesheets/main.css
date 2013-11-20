@@ -5,7 +5,7 @@ body {
 }
 
 /* Login / Signup Page */
-.home-buttons, .new_driver, .signin {
+.home-buttons, .signup, .signin {
   width: 80%;
   height: 50%;
   overflow: auto;
@@ -14,7 +14,7 @@ body {
   top: 0; left: 0; bottom: 0; right: 0;
 }
 
-.home-buttons a, .new_driver input, .signin input {
+.home-buttons a, .signup input, .signin input {
 	width: 80%;
 	min-width: 96px;
 	max-width: 192px;
@@ -25,4 +25,8 @@ body {
 	padding-left: auto;
 	padding-right: auto;
 	font-opacity: 0.5
+}
+
+.centered {
+  text-align: center;
 }

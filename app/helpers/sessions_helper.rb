@@ -1,6 +1,6 @@
 module SessionsHelper
   def current_user
-    session[:id] ? User.find(session[:id]) : nil
+    session[:id] ? ActiveDriver.find(session[:id]) : nil
   end
 
   def log_out

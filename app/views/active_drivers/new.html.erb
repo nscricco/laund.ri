@@ -1,0 +1,12 @@
+<%= form_for @active_driver, html: {class: "signup"} do |f|%>
+	<div class="input-group-lg">
+ 		<%= f.text_field :Email__c, class: "form-control", placeholder: "Email" %>
+ 	</div>
+ 	<div class="input-group-lg">
+  		<%= f.password_field :password, class: "form-control", placeholder: "Password" %>
+  	</div>
+  	<div class="input-group-lg">
+  		<%= f.password_field :password_confirmation, class: "form-control", placeholder: "Confirm" %>
+  	</div>
+  		<%= f.submit "Sign up", class: "btn btn-default btn-lg" %>
+<%end%>
