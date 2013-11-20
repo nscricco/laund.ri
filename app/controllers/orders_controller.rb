@@ -1,6 +1,6 @@
 class OrdersController < ApplicationController
   def index
-    @driver = Driver.new
+    @active_driver = ActiveDriver.new
     # @orders = Order.all
   end
 end
