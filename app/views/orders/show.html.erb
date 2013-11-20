@@ -1,18 +1,32 @@
 <div>
-  <h3><%= @order.id %></h3>
+  <h3>Order For: <%= @customer['Name'] %></h3>
+
   <table>
     <tr>
-      <th></th>
-      <th></th>
+      <th colspan="2">Customer Information</th>
     </tr>
-  <%  %>
+  <% @customer.each_pair do |name, value| %>
+    <% if name != 'Preferences' %>
+      <tr>
+        <td><%= name %></td>
+        <td><%= value %></td>
+      </tr>
+    <% end %>
+  <% end %>
+  </table>  
+
+
+  <table>
     <tr>
-      <td>Weight</td>
-      <td><%= @order.Weight__c %></td>
+      <th colspan="2">Order Status</th>
     </tr>
-    <tr>
-      <td>Weight</td>
-      <td><%= @order.Weight__c %></td>
-    </tr>
+  <% @order.each_pair do |name, value| %>
+    <% if name != 'Customer_ID' %>
+      <tr>
+        <td><%= name %></td>
+        <td><%= value %></td>
+      </tr>
+    <% end %>
+  <% end %>
   </table>
 </div>
