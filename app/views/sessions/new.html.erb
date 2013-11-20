@@ -1,0 +1,9 @@
+<%= form_for log_in_path, html: {class: "signin"} do |f|%>
+  	<div class="input-group-lg">
+  		<%= f.text_field :email, class: "form-control", placeholder: "Email" %>
+  	</div>
+  	<div class="input-group-lg">
+  		<%= f.text_field :password, class: "form-control", placeholder: "Password" %>
+  	</div>
+  		<%= f.submit "Log in", class: "btn btn-default btn-lg" %>
+<%end%>
