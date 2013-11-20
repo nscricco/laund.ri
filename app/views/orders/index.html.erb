@@ -1,0 +1,5 @@
+<%if current_user%>
+  <h1>LOGGED IN!!!!!</h1>
+<%else%>
+  <%= render partial: "drivers/new", locals: {driver: @driver} %>
+<%end%>
