@@ -17,13 +17,24 @@ module SFM
     end
   end
 
+  def self.seed_table(collection, object_string)
+    collection.each do |object|
+      params = SFM.get_sfo_params(object)
+      SFM.create_database_entry(object_string, params)
+    end
+  end
+
   def self.create_database_entry(table_string, params)
     table_string = table_string.capitalize
     table_name = Object.const_get(table_string)
+    params = SFM.set_params(table_name, params)
+    p table_name.new(params)
+  end
+
+  def self.set_params(table_name, params)
     table_attributes = SFM.get_attributes(table_name)
     params = ActionController::Parameters.new(params)
-    params = params.permit(relevant_params)
-    table.new(params)
+    params = params.permit(table_attributes)
   end
 
   def self.get_attributes(table_name)
