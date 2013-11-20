@@ -41,6 +41,7 @@ end
 gem 'pg'
 gem 'databasedotcom'
 gem 'databasedotcom-rails'
+gem 'restforce'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
