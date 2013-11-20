@@ -31,3 +31,5 @@ LOG:  database system is ready to accept connections
 LOG:  autovacuum launcher started
 ERROR:  database "laundri-db-dev" already exists
 STATEMENT:  CREATE DATABASE "laundri-db-dev" ENCODING = 'utf8'
+ERROR:  column "Customer_SF_ID__c" of relation "orders" does not exist
+STATEMENT:  ALTER TABLE "orders" DROP "Customer_SF_ID__c"
