@@ -17,34 +17,33 @@ ActiveRecord::Schema.define(version: 20131119233010) do
   enable_extension "plpgsql"
 
   create_table "customers", force: true do |t|
-    t.string "name"
-    t.string "address"
-    t.string "city"
-    t.string "state"
-    t.string "zipcode"
-    t.string "phone"
-    t.string "email"
-    t.text   "preferences"
+    t.string "Name"
+    t.string "Street__c"
+    t.string "City__c"
+    t.string "State__c"
+    t.string "Zipcode__c"
+    t.string "PhoneNumber__c"
+    t.string "Email__c"
+    t.text   "Preferences__c"
   end
 
   create_table "drivers", force: true do |t|
-    t.string   "password_digest"
-    t.string   "password_confirmation"
-    t.string   "email"
+    t.string   "password__c"
+    t.string   "Email__c"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "orders", force: true do |t|
-    t.decimal  "weight"
-    t.decimal  "cost"
-    t.integer  "number_of_items"
-    t.string   "service_type"
-    t.datetime "ready_for_pickup"
-    t.datetime "en_route"
-    t.datetime "arrived"
-    t.datetime "complete"
-    t.datetime "delivered"
+    t.decimal  "Weight__c"
+    t.decimal  "Cost__c"
+    t.integer  "Number_of_Items__c"
+    t.string   "Type__c"
+    t.datetime "Ready_For_Pickup__c"
+    t.datetime "en_route__c"
+    t.datetime "arrived__c"
+    t.datetime "complete__c"
+    t.datetime "delivered__c"
   end
 
 end
