@@ -32,6 +32,8 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'bcrypt-ruby'
+
 group :development do
 	gem 'dotenv-rails'
 end
@@ -39,8 +41,6 @@ end
 gem 'pg'
 gem 'databasedotcom'
 gem 'databasedotcom-rails'
-gem 'bcrypt-ruby'
-
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
