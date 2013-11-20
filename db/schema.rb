@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20131119233010) do
     t.string   "Email__c"
     t.string   "type"
     t.string   "password_digest"
+
     t.datetime "created_at"
     t.datetime "updated_at"
   end
