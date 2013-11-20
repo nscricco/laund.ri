@@ -4,8 +4,17 @@ body {
 	background-position: center;
 }
 
+/* Logo */
+.logo {
+	text-align: center;
+	margin-top: 5%;
+	font-size: 56px;
+	font-family: 'Princess Sofia', cursive;
+	color: #cccccc;
+}
+
 /* Login / Signup Page */
-.home-buttons, .signup, .signin {
+.home-buttons, .signup, .signin{
   width: 80%;
   height: 50%;
   overflow: auto;
