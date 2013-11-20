@@ -1,0 +1,33 @@
+LOG:  database system was interrupted; last known up at 2013-11-19 22:39:09 PST
+LOG:  database system was not properly shut down; automatic recovery in progress
+LOG:  redo starts at 0/53C39818
+WARNING:  could not open directory "base/34090": No such file or directory
+CONTEXT:  xlog redo drop db: dir 34090/1663
+WARNING:  some useless files may be left behind in old database directory "base/34090"
+CONTEXT:  xlog redo drop db: dir 34090/1663
+LOG:  record with zero length at 0/53C39880
+LOG:  redo done at 0/53C39840
+LOG:  last completed transaction was at log time 2013-11-19 22:39:09.627907-08
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+ERROR:  database "laundri-db-dev" already exists
+STATEMENT:  CREATE DATABASE "laundri-db-dev" ENCODING = 'utf8'
+LOG:  received smart shutdown request
+LOG:  autovacuum launcher shutting down
+LOG:  shutting down
+LOG:  database system is shut down
+LOG:  database system was shut down at 2013-11-19 22:48:11 PST
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+ERROR:  database "laundri-db-dev" is being accessed by other users
+DETAIL:  There is 1 other session using the database.
+STATEMENT:  DROP DATABASE IF EXISTS "laundri-db-dev"
+LOG:  received smart shutdown request
+LOG:  autovacuum launcher shutting down
+LOG:  shutting down
+LOG:  database system is shut down
+LOG:  database system was shut down at 2013-11-19 23:13:30 PST
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+ERROR:  database "laundri-db-dev" already exists
+STATEMENT:  CREATE DATABASE "laundri-db-dev" ENCODING = 'utf8'

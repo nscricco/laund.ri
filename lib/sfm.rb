@@ -28,7 +28,7 @@ module SFM
     table_string = table_string.capitalize
     table_name = Object.const_get(table_string)
     params = SFM.set_params(table_name, params)
-    p table_name.new(params)
+    p table_name.create(params)
   end
 
   def self.set_params(table_name, params)
@@ -38,7 +38,7 @@ module SFM
   end
 
   def self.get_attributes(table_name)
-    table_name.create.attributes.keys
+    table_name.new.attributes.keys
   end
 	
 end 
