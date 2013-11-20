@@ -4,6 +4,7 @@ class SessionsController < ApplicationController
     if @driver && @driver.authenticate(params[:password])
       log_in(@driver)
     end
+    redirect_to root_path
   end
 
   def destroy
