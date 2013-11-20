@@ -31,14 +31,13 @@ ActiveRecord::Schema.define(version: 20131119233010) do
     t.string   "Email__c"
     t.string   "type"
     t.string   "password_digest"
-
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "orders", force: true do |t|
-    t.decimal  "Weight__c"
-    t.decimal  "Cost__c"
+    t.float    "Weight__c"
+    t.float    "Cost__c"
     t.integer  "Number_of_Items__c"
     t.string   "Type__c"
     t.datetime "Ready_For_Pickup__c"
