@@ -2,6 +2,7 @@ body {
 	background-image: url('texture_graphite_black.jpg');
 	background-repeat: no-repeat;
 	background-position: center;
+	color: #cccccc;
 }
 
 /* Logo */
@@ -13,17 +14,16 @@ body {
 	color: #cccccc;
 }
 
-/* Login / Signup Page */
-.home-buttons, .signup, .signin{
+/* Buttons */
+.home-buttons, .signup, .signin, .orderbuttons{
   width: 80%;
   height: 50%;
   overflow: auto;
   margin: auto;
-  position: absolute;
   top: 0; left: 0; bottom: 0; right: 0;
 }
 
-.home-buttons a, .signup input, .signin input {
+.home-buttons a, .signup input, .signin input, .orderbuttons input {
 	width: 80%;
 	min-width: 96px;
 	max-width: 192px;
@@ -36,6 +36,13 @@ body {
 	font-opacity: 0.5
 }
 
-.centered {
-  text-align: center;
+/* Tables */
+
+.orderinfo {
+	margin: 5%;
+}
+
+.highlight {
+	font-weight: bold;
+	color: #1F4778;
 }
