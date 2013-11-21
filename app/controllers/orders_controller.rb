@@ -22,7 +22,7 @@ class OrdersController < ApplicationController
       order_sf.update_attributes "delivered__c" => @order.delivered__c
     elsif params[:confirming] == 'en_route' && @order.en_route__c.nil?
       @order.touch(:en_route__c)
-      order_sf.update_attributes "delivered__c" => @order.delivered__c
+      order_sf.update_attributes "en_route__c" => @order.en_route__c
     end
   end
 
