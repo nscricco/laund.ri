@@ -2,7 +2,7 @@ class OrdersController < ApplicationController
   include Databasedotcom::Rails::Controller
   def index
     @active_driver = ActiveDriver.new
-    @orders = Order.all
+    @orders = Order.ready_for_pickup
   end
 
   def show

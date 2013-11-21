@@ -39,6 +39,10 @@ group :development do
 	gem 'dotenv-rails'
 end
 
+group :production do
+  gem 'rails_12factor'
+end
+
 gem 'pg'
 gem 'databasedotcom'
 gem 'databasedotcom-rails'
