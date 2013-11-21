@@ -1,7 +1,7 @@
 <%if current_user%>
   <% @orders.each do |order| %>
-    <div class="centered">
-      <%= link_to "#{order.customer.Street__c}, #{order.customer.Zipcode__c}", order_path(order), :class => "btn btn-large btn-primary"  %>
+    <div class="orderbuttons">
+      <%= link_to "#{order.customer.Street__c}, #{order.customer.Zipcode__c}", order_path(order), class: "btn btn-default btn-lg"  %>
     </div><br />
   <%end%>
 <%else%>

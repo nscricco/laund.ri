@@ -23,7 +23,7 @@ body {
   top: 0; left: 0; bottom: 0; right: 0;
 }
 
-.home-buttons a, .signup input, .signin input, .orderbuttons input {
+.home-buttons a, .signup input, .signin input, .orderbuttons input, .orderbuttons a {
 	width: 80%;
 	min-width: 96px;
 	max-width: 192px;
@@ -34,6 +34,15 @@ body {
 	padding-left: auto;
 	padding-right: auto;
 	font-opacity: 0.5
+}
+
+.orderbuttons a {
+	max-width: 288px;
+	overflow: hidden;
+	white-space:nowrap;
+    text-overflow:ellipsis;
+    width:100%;
+    display:block;
 }
 
 /* Tables */
