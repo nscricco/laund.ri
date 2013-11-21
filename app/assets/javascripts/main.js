@@ -1,5 +1,5 @@
-
 $(document).on('page:load', function() {
+	console.log('hello')
 	$('.orderbuttons').find('input').on('click', function(e) {
 		conole.log('hello')
 		var self = this;
