@@ -18,7 +18,12 @@ class OrdersController < ApplicationController
     elsif params[:confirming] == 'en_route' && @order.en_route__c.nil?
       @order.touch(:en_route__c)
     end
-    redirect_to order_path
+
+    respond_to do |format|
+      format.html redirect_to order_path
+      format.json { render json: @order}
+    end
+
   end
 
 end
