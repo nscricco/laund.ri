@@ -20,10 +20,10 @@ class OrdersController < ApplicationController
     end
 
     respond_to do |format|
-      format.html redirect_to order_path
-      format.json { render json: @order}
+      format.json { render json: { object:@order } }
+      format.html { redirect_to(order_path) }
     end
-
+  
   end
 
 end
