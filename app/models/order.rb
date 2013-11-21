@@ -12,4 +12,8 @@ class Order < ActiveRecord::Base
 			return c if self.Customer_SF_ID__c == c.Id
 		end
 	end
+
+  def self.ready_for_pickup
+    self.where.not(Ready_For_Pickup__c: nil).where(en_route__c: nil)
+  end
 end
