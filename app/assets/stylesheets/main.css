@@ -1,5 +1,5 @@
 body {
-	background-image: asset-url("/assets/texture_graphite_black.jpg");
+	background-image: asset-url("/assets/texture_graphite_black.jpg", image);
 	background-repeat: no-repeat;
 	background-position: center;
 }
